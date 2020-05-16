@@ -7,3 +7,6 @@ module Booth (ldA, ldQ, ldM, clrA, clrQ, clrff, sftA, sftQ, addsub, decr, ldcnt,
   
   assign eqz = ~&count;
   
+  shiftreg AR (A, Z, A[15], clk, ldA, clrA, sftA);
+  shiftreg QR (Q, data_in, A[0], clk, ldQ, clrQ, sftQ);
+  dff QM1
