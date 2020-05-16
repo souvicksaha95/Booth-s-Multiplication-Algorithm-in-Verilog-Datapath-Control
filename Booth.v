@@ -12,3 +12,5 @@ module Booth (ldA, ldQ, ldM, clrA, clrQ, clrff, sftA, sftQ, addsub, decr, ldcnt,
   dff QM1 (Q[0], qm1, clk, clrff);
   PIPO MR (data_in, M, clk, ldM);
   ALU AS (Z, A, M, addsub);
+  counter CN (count, decr, ldcnt, clk);
+endmodule
